@@ -1,0 +1,6 @@
+<!--pages/find/find.wxml-->
+<view class='container'>
+  <view wx:for="{{findData}}" wx:key="{{index}}" data-type="{{item.type}}" data-type_param="{{item.type_param}}">
+    <image src="{{item.path_url}}"></image>
+  </view>
+</view>

@@ -1,0 +1,70 @@
+<view class='container'>
+  <view class='nav'>
+    <label bindtap='nowPt' class='{{listOnoff?"active":""}}'>正在拼团</label>
+    <label bindtap='previewPt' class='{{!listOnoff?"active":""}}'>拼团预告</label>
+    <label>分类</label>
+  </view>
+  <view class='ptlist' wx:if="{{listOnoff}}">
+    <view wx:if="{{nowListData.length==0}}">暂无拼团信息，敬请期待</view>
+    <view class='ptbox' wx:for="{{nowListData}}" wx:key="{{index}}">
+      <view class='lt-item'>
+        <image class='lt-img' src='{{item.goods_cover_url}}'></image>
+        <view class='lt-text'>
+          <text class='lt-t1 multiline'>{{item.goods_name}}</text>
+          <view class='lt-t2'>
+            <text class='lt-price'>￥{{item.price}}</text>
+            <text class='lt-yt'>已团{{item.ordered_count_ugly}}件</text>
+          </view>
+        </view>
+      </view>
+      <view class='tuan-bar f-row_between'>
+        <view class='tb-01'>
+          <label>截止
+            <text>{{item.end_time}}</text>
+          </label>
+          <label>还差
+            <text>{{item.diff_buyer}}</text>人待加入</label>
+        </view>
+        <view class='tb-02 f-row_between'>
+          <label class='btn1'>我要发团</label>
+          <label class='btn2'>立即参团</label>
+        </view>
+      </view>
+    </view>
+    <my-component wx:if="{{load_onoff}}"></my-component>
+    <view class='loading' wx:if="{{bottom &!nowListData.length==0}}">
+      <text>我也是有底线的！</text>
+    </view>
+  </view>
+  <!-- 拼团预告 -->
+  <view class='ptlist' wx:if="{{!listOnoff}}">
+    <view wx:if="{{willListData.length==0}}">暂无拼团信息，敬请期待</view>
+    <view class='ptbox' wx:for="{{willListData}}" wx:key="{{index}}">
+      <view class='lt-item'>
+        <image class='lt-img' src='{{item.goods_cover_url}}'></image>
+        <view class='lt-text'>
+          <text class='lt-t1 multiline'>{{item.goods_name}}</text>
+          <view class='lt-t2'>
+            <text class='lt-price'>￥{{item.price}}</text>
+            <text class='lt-yt'>已团{{item.ordered_count_ugly}}件</text>
+          </view>
+        </view>
+      </view>
+      <view class='tuan-bar f-row_between'>
+        <view class='tb-01'>
+          <label>
+            <text>{{item.start_time}}</text>开团</label>
+
+        </view>
+        <view class='tb-02 f-row_between'>
+          <label class='btn1'>我要发团</label>
+          <label class='btn2'>立即参团</label>
+        </view>
+      </view>
+    </view>
+    <my-component wx:if="{{load_onoff}}"></my-component>
+    <view class='loading' wx:if="{{bottom&!willListData.length==0}}">
+      <text>我也是有底线的！</text>
+    </view>
+  </view>
+</view>

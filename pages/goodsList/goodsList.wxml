@@ -1,0 +1,68 @@
+<!--pages/goodsList/goodsList.wxml-->
+<view class='containe'>
+  <view class='nav'>
+    <label bindtap='classify_switch'>{{classifyName}}
+      <view class='{{classify_onoff?"sTriangle":"xTriangle"}}'></view>
+    </label>
+    <label id="settlementSort" bindtap='pirce' class='{{active?"active":""}}'>价格
+      <view class='{{active?"sTriangle":"xTriangle"}}'></view>
+    </label>
+    <label id='countSort' bindtap='saleVolume' class='{{!active?"active":""}}'>销量
+      <view class='{{!active?"sTriangle":"xTriangle"}}'></view>
+    </label>
+    <label bindtap='layout_switch'>
+    <image wx:if="{{!layout_onoff}}" src='../../assets/images/l.png'></image>
+    <image wx:if="{{layout_onoff}}" src='../../assets/images/k.png'></image>
+    </label>
+    <view class='classify' wx:if="{{classify_onoff}}">
+      <view wx:for="{{classifyData}}" wx:key="{{index}}" data-name="{{item.category_name}}" data-category_id="{{item.category_id}}" bindtap='categoryList'>{{item.category_name}}</view>
+    </view>
+  </view>
+
+  <view class='goodslist' wx:if="{{layout_onoff}}">
+    <view class='goods' wx:for="{{goodsData}}" wx:key="{{index}}">
+      <image src='{{item.goods_cover_url}}' class='goodsImg'></image>
+      <view class='goodsname'>
+        <view class='span'>
+          <view>
+            <text>{{item.goods_name}}</text>
+          </view>
+        </view>
+        <view>
+          <span></span>
+        </view>
+      </view>
+      <view class='price'>
+        <text>市场价:￥{{item.settlement_fee}}</text>
+        <text></text>
+      </view>
+      <view class='rate'>
+        <text>￥{{item.settlement_fee*2}}</text>
+        <view class='coll'>
+          <text>{{item.coll}}</text>
+          <image src='http://www.youtasc.com/shops/resources/images_my/q.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='h-goodlist' wx:if="{{!layout_onoff}}">
+    <view class='h-goods' wx:for="{{goodsData}}" wx:key="{{index}}">
+      <image class="h-goodimg" src='{{item.goods_cover_url}}'></image>
+      <view class='h-goodsinfo'>
+        <text class='h-goodsName'>{{item.goods_name}}</text>
+        <view class='h-price'>
+          <text>￥{{item.settlement_fee}}</text>
+        </view>
+        <view class='h-salesVolume'>
+          <text>市场价:￥{{item.settlement_fee*2}}</text>
+          <text>销量:{{item.ordered_count}}</text>
+        </view>
+      </view>
+    </view>
+    <my-component wx:if="{{load_onoff}}"></my-component>
+    <view class='loading' wx:if="{{bottom}}">
+      <text>我也是有底线的！</text>
+    </view>
+  </view>
+</view>

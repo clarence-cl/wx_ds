@@ -1,0 +1,86 @@
+<!--pages/index/index.wxml-->
+  <view class='container'>
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="#fff" indicator-active-color="#f42f19" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item data-type="{{item.type}}" data-type_param="{{item.type_param}}" bindtap="toDetail">
+          <image src="{{item.path_url}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='search_box'>
+      <view class='search'>
+        <text class='fa fa-search'></text>
+        <input bindconfirm="search" type='text' bindconfirm="search" placeholder='搜索'></input>
+        <image bindtap='tomy' class='user' src='../../assets/images/user.png'></image>
+      </view>
+    </view>
+    <view class='nav'>
+      <label wx:for="{{navData}}" wx:key="{{index}}" data-til="{{item.name}}" data-category_id="{{item.id}}" bindtap='togoodsList'>
+        <image src='{{item.imgUrl}}'></image>
+        <text>{{item.name}}</text>
+      </label>
+    </view>
+    <image class='adsense' src='{{adsenseData.path_url}}' data-type="{{adsenseData.type}}" data-type_param="{{adsenseData.type_param}}" bindtap="toDetail"></image>
+    <view class='activity f-row'>
+      <image src='http://www.youtasc.com/shops/resources/images_my/zzpt.png'></image>
+      <image src='http://www.youtasc.com/shops/resources/images_my/yttj.png'></image>
+    </view>
+    <view class='like'>
+    </view>
+    <view class='goodslist'>
+      <view class='goods' wx:for="{{recommendData}}" wx:key="{{index}}" data-goodsId="{{item.goods_id}}">
+        <image src='{{item.goods_cover}}' class='goodsImg'></image>
+        <view class='goodsname'>
+          <view class='span'>
+            <view>
+              <text>{{item.goods_name}}</text>
+            </view>
+          </view>
+          <view>
+            <span></span>
+          </view>
+        </view>
+        <view class='price'>
+          <text>市场价:￥{{item.settlement_fee*2}}</text>
+          <text></text>
+        </view>
+        <view class='rate'>
+          <text>￥{{item.settlement_fee}}</text>
+          <view class='coll'>
+            <text>{{item.coll}}</text>
+            <image src='http://www.youtasc.com/shops/resources/images_my/q.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='rx'>
+    </view>
+    <view class='goodslist'>
+      <view class='goods' wx:for="{{hotSaleData}}" wx:key="{{key}}">
+        <image src='{{item.goods_cover}}' class='goodsImg'></image>
+        <view class='goodsname'>
+          <view class='span'>
+            <view>
+              <text>{{item.goods_name}}</text>
+            </view>
+          </view>
+          <view>
+            <span></span>
+          </view>
+        </view>
+        <view class='price'>
+          <text>市场价:￥{{item.settlement_fee*2}}</text>
+          <text></text>
+        </view>
+        <view class='rate'>
+          <text>￥{{item.settlement_fee}}</text>
+          <view class='coll'>
+            <text>{{item.col}}</text>
+            <image src='http://www.youtasc.com/shops/resources/images_my/q.png'></image>
+          </view>
+        </view>
+      </view>
+      <my-component wx:if="{{load}}"></my-component>
+    </view>
+    <view catchtap='toTop' class='toTop'></view>
+  </view>

@@ -1,0 +1,28 @@
+.f-center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.f-row_center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.f-row_between{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.f-row_around{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.f-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

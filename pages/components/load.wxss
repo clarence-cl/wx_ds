@@ -1,0 +1,15 @@
+.loading{
+    height: 50rpx;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10rpx 0;  
+}
+.loading text{
+    font-size: 24rpx;
+    color: #b8b8b8;
+}
+.loading image{
+    width: 30rpx;
+    height: 30rpx;
+}

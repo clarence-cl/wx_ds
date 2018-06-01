@@ -1,0 +1,95 @@
+/* pages/ptList/ptList.wxss */
+.container{
+  overflow: hidden;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 0;
+  position: fixed;
+  background: #fff;
+}
+.nav label{
+ width:25%;
+ height: 80rpx;
+ line-height: 80rpx;
+ text-align: center;
+ position: relative;
+ color: #666;
+}
+.nav label image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.ptlist{
+  margin-top: 100rpx;
+}
+.ptbox{
+  border-top: 5rpx solid #eee;
+  padding: 28rpx 10rpx 0 10rpx;
+  width: 750rpx;
+  height: 290rpx;
+}
+.lt-item{
+  display: flex;
+  flex-direction: row;
+  width: 706rpx;
+  height: 180rpx;
+  margin: 0 auto;
+}
+.lt-img{
+  width: 180rpx;
+  height: 180rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 20rpx;
+  margin-right: 34rpx;
+}
+.lt-text{
+  width: 492rpx;
+}
+.lt-t1{
+  height: 88rpx;
+  font-size: 30rpx;
+}
+.lt-t2{
+  margin: 16rpx 0 12rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tuan-bar{
+  height: 64rpx;
+  width: 706rpx;
+  padding: 12rpx 0;
+  margin: 16rpx auto 0 auto;
+  border-top: 2rpx solid #f1f1f1;
+
+}
+.lt-price{
+  font-size: 38rpx;
+}
+.tb-01 label:first-child{
+    margin-right: 6rpx;
+}
+.tb-01 label text{
+  color:#ee100d
+}
+.btn1,.btn2{
+    display: block;
+    width: 116rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0 8rpx;
+    border: 2rpx solid #f60;
+    border-radius: 10rpx;
+}
+.btn1{
+  color: #f60;
+}
+.btn2{
+  margin-left: 6rpx;
+  color: white;
+  background-color: #f60;
+}

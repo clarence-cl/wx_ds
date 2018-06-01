@@ -1,0 +1,5 @@
+<!-- 组件模板 -->
+<view class="loading">
+     <text>加载中...</text>
+  <image src='http://www.youtasc.com/shops/resources/images_my/load.gif'></image>
+</view>

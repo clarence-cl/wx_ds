@@ -1,0 +1,222 @@
+/* pages/index/index.wxss */
+
+swiper, .slide-image {
+  width: 100%;
+  height: 366rpx;
+}
+
+.container {
+  background: #f6f6f6;
+}
+
+.search_box {
+  width: 100%;
+  height: 100rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+}
+
+.search {
+  width: 624rpx;
+  height: 56rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 26rpx;
+  left: 63rpx;
+  background-color: rgba(251, 252, 253, 0.8);
+  border-radius: 40rpx;
+  color: #999;
+}
+
+.user {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 8rpx;
+  right: -50rpx;
+}
+
+.fa-search {
+  margin: 0 25rpx;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+.nav label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30rpx 35rpx;
+}
+
+.nav label image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.nav label text {
+  margin-top: 15rpx;
+}
+
+.adsense {
+  width: 100%;
+  height: 208rpx;
+}
+
+.activity {
+  width: 100%;
+  margin-top: 10rpx;
+}
+
+.activity image {
+  width: 375rpx;
+  height: 240rpx;
+}
+.like{
+  background: url('http://www.youtasc.com/shops/resources/images/tj.png') 0 0 no-repeat;
+}
+.rx{
+  background: url('http://www.youtasc.com/shops/resources/images/rx.png') 0 0 no-repeat;
+}
+.like,.rx{
+  width: 750rpx;
+  height: 72rpx;
+  margin-bottom: 10rpx;
+  background-size: 100%;
+}
+
+.goodslist {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.goods {
+  width: 360rpx;
+  height: 542rpx;
+  margin: 10rpx 7.5rpx 10rpx 8rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.goodsImg {
+  width: 360rpx;
+  height: 360rpx;
+}
+
+.goodsname {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding: 0 10rpx;
+  font-size: 25rpx;
+  height: 70rpx;
+  display: table;
+}
+
+.goodsname .span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.coll {
+  font-size: 21rpx;
+  color: #b5b5b5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rate .coll text {
+  font-size: 21rpx;
+  color: #b5b5b5;
+  font-weight: normal;
+  margin-right: 5rpx;
+}
+
+.rate image {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.rate text {
+  font-size: 30rpx;
+  color: #f42f19;
+  font-weight: 700;
+}
+
+.goodsname .span view {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-weight: normal;
+}
+
+.hot {
+  background: #f42f19;
+  color: #fff;
+  width: 50rpx;
+  font-style: normal;
+  padding: 5rpx;
+  font-size: 20rpx;
+  border-radius: 8rpx;
+  margin-right: 5rpx;
+  display: none;
+}
+
+.price {
+  padding: 0 10rpx;
+  font-size: 21rpx;
+  color: #b5b5b5;
+  margin: 5rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.price text {
+  font-size: 21rpx;
+  color: #b5b5b5;
+}
+
+.rate {
+  padding: 0 10rpx;
+  font-size: 21rpx;
+  color: #b5b5b5;
+  margin: 5rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.toTop{
+    width: 80rpx;
+    height: 80rpx;
+    position: fixed;
+    bottom: 200rpx;
+    text-align: center;
+    right: 10rpx;
+    border-radius: 50%;
+    color: #343434;
+    z-index: 10000;
+    background: url(http://www.youtasc.com/shops/resources/images/user_14.png) no-repeat;
+    background-size: 100%;
+    display: block;
+}
+my-component{
+  width: 100%;
+}
